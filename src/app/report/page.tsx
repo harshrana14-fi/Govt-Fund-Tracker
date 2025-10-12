@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Copy, Check, Send, AlertCircle, Info, Shield, Users, Globe, Award, Star, Zap, Target, Clock, BarChart3, Eye, Download, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { FileText, Copy, Check, Send, AlertCircle, Info, Shield, Users, Globe, Award, Star, TrendingUp, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';

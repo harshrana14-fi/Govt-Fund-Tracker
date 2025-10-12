@@ -48,6 +48,13 @@ export async function POST(request: NextRequest) {
       organization
     });
 
+    if (!user) {
+      return NextResponse.json(
+        { success: false, error: 'Failed to create user' },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json({
       success: true,
       message: 'User created successfully',

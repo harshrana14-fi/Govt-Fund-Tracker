@@ -111,7 +111,7 @@ export function detectAnomalies(projects: Project[]): Anomaly[] {
   // Remove duplicate vendor concentration anomalies
   const vendorAnomalies = anomalies.filter(a => a.anomaly_type === 'Vendor Concentration');
   const uniqueVendorAnomalies = vendorAnomalies.filter((anomaly, index, self) => 
-    index === self.findIndex(a => a.vendor === anomaly.vendor)
+    index === self.findIndex(a => a.project_id === anomaly.project_id)
   );
 
   return anomalies.filter(a => a.anomaly_type !== 'Vendor Concentration').concat(uniqueVendorAnomalies);

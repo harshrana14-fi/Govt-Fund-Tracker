@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { AlertTriangle, Search, Filter, TrendingUp, TrendingDown, DollarSign, Shield, Clock, Target, Users, BarChart3, Eye, Download, FileText, AlertCircle, CheckCircle, Zap, Globe, Award, Star } from 'lucide-react';
+import { AlertTriangle, Search, Filter, TrendingUp, TrendingDown, DollarSign, Shield, Clock, Target, Users, BarChart3, Eye, FileText, AlertCircle, Zap, Globe } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';

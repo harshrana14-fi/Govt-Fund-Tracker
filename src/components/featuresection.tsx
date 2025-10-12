@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Search, BarChart3, FileText, Shield, Users, Globe, CheckCircle, ChevronLeft, ChevronRight, Award, Building, Lock, Eye, TrendingUp, AlertTriangle, Database, Zap } from 'lucide-react';
+import { BarChart3, FileText, Shield, CheckCircle, ChevronRight, Building, AlertTriangle, Database } from 'lucide-react';
 
 const EnhancedFeaturesSection = () => {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -69,15 +68,8 @@ const EnhancedFeaturesSection = () => {
       setActiveFeature((prev) => (prev + 1) % features.length);
     }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [features.length]);
 
-  const nextFeature = () => {
-    setActiveFeature((prev) => (prev + 1) % features.length);
-  };
-
-  const prevFeature = () => {
-    setActiveFeature((prev) => (prev - 1 + features.length) % features.length);
-  };
 
   const currentFeature = features[activeFeature];
 

@@ -33,13 +33,13 @@ export function generateToken(user: AuthUser): string {
       role: user.role 
     },
     JWT_SECRET,
-    { expiresIn: JWT_EXPIRES_IN }
+    { expiresIn: JWT_EXPIRES_IN } as jwt.SignOptions
   );
 }
 
 export function verifyToken(token: string): { id: string; email: string; role: string } | null {
   try {
-    return jwt.verify(token, JWT_SECRET);
+    return jwt.verify(token, JWT_SECRET) as { id: string; email: string; role: string };
   } catch (error) {
     return null;
   }

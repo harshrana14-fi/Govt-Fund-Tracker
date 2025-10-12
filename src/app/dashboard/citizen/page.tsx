@@ -8,31 +8,20 @@ import {
   TrendingUp, 
   AlertTriangle, 
   FileText, 
-  Shield, 
   Users, 
-  BarChart3, 
   Search, 
-  ArrowRight,
-  CheckCircle,
-  Clock,
   DollarSign,
   Target,
   Eye,
   Download,
-  Star,
-  Award,
-  Globe,
   Zap,
   MapPin,
   Building,
-  Calendar,
   Percent
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import Link from 'next/link';
 
 interface DashboardData {
@@ -63,7 +52,6 @@ export default function CitizenDashboard() {
   const router = useRouter();
   const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     // Check authentication

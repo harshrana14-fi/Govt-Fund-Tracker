@@ -18,7 +18,8 @@ export default function SpendingChart({ projects }: SpendingChartProps) {
     spent: project.spent_amount / 100000,
   }));
 
-  const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: Array<{ name: string; value: number; color: string }>; label?: string }) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: Array<{ name: string; value: number; color: string; payload?: any }>; label?: string }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (

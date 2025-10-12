@@ -68,7 +68,7 @@ export default function ProjectsPage() {
       let aValue: string | number = a[sortField];
       let bValue: string | number = b[sortField];
 
-      if (typeof aValue === 'string') {
+      if (typeof aValue === 'string' && typeof bValue === 'string') {
         aValue = aValue.toLowerCase();
         bValue = bValue.toLowerCase();
       }
